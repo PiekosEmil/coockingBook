@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout.html}" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <title>Coocking book</title>
+</head>
+<body>
+<div class="content" layout:fragment="content">
+    <img th:src="${przepis.getImageUrl()}" alt="Food image">
+    <h1 th:text="${przepis.getTitle()}"></h1>
+    <h2 th:text="'Kategoria: ' + ${przepis.getKategoria().getName()}"></h2>
+    <p th:text="${przepis.getDescription()}"></p><br>
+    <div class="likes">
+        <img src="/giphy.webp">
+        <span th:text="${przepis.getLikes()}"></span>
+    </div>
+    <div class="edit-menu">
+        <ul>
+            <li><form method="post" th:action="@{/polub(id=${przepis.getId()})}"><button class="button" type="submit">Polub</button></form></li>
+            <li><a th:href="@{/form(id=${przepis.getId()})}"><button class="button" type="submit">Edytuj</button></a></li>
+            <li><form method="post" th:action="@{/usun(id=${przepis.getId()})}"><button class="button" type="submit">Usuń</button></form></li>
+        </ul>
+    </div>
+</div>
+</body>
+</html>

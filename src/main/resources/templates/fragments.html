@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Coocking Book</title>
+</head>
+<header th:fragment="header">
+    <img src="/header_coock.jpeg" alt="Header image">
+    <ul class="menu" th:fragment="menu">
+        <li><button class="button" onclick=location.href='/'>Wszystkie przepisy</button></li>
+        <li><button class="button" onclick=location.href='/form'>Dodaj przepis</button></li>
+        <li><button class="button" onclick=location.href='/kategorie'>Kategorie</button></li>
+        <li><button class="button" onclick=location.href='/?sortByLikes=true'>Najlepsze przepisy</button></li>
+    </ul>
+</header>
+<body>
+
+</body>
+<footer th:fragment="footer">
+    <img src="/hf_coock.jpeg" alt="Footer image">
+</footer>
+</html>
