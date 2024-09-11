@@ -1,0 +1,200 @@
+* {
+    margin: 0;
+    font-family: "Century Schoolbook";
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+header > img {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+footer > img {
+    display: flex;
+    flex-grow: 1;
+    margin-top: auto;
+    margin-bottom: 0;
+    width: 100%;
+}
+
+html, body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background-image: url("bg_img.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.content {
+    flex: 1;
+    padding: 20px;
+}
+
+ul.menu {
+    padding: 0;
+    margin-top: 0;
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+}
+
+ul li {
+    padding: 10px;
+}
+
+ul li div {
+    margin-right: 20px;
+}
+
+.recipes > li {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+}
+
+li > img {
+    margin-right: 10px;
+    max-width: 200px;
+    max-height: 200px;
+    border-style: ridge;
+}
+
+a > img {
+    max-width: 200px;
+    max-height: 200px;
+    border-style: ridge;
+}
+
+a:visited {
+    color: transparent;
+}
+
+a:link {
+    color: black;
+    text-decoration: none;
+}
+
+div > img {
+    max-width: 400px;
+    border-style: ridge;
+}
+
+div > p {
+    margin-right: 50%;
+}
+
+.button {
+    padding: 15px 25px;
+    font-size: 24px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: mintcream;
+    background-color: palegreen;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 5px 10px lightgray;
+    position: relative;
+    top: -20px;
+}
+
+.button:hover {
+    background-color: green
+}
+
+.button:active {
+    background-color: green;
+    box-shadow: 0 5px dimgray;
+    transform: translateY(5px);
+}
+
+textarea {
+    width: 100%;
+    height: 150px;
+    margin-top: 10px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid lightgreen;
+    border-radius: 4px;
+    background-color: transparent;
+    resize: none;
+}
+
+input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid lightgreen;
+    border-radius: 4px;
+    background-color: transparent;
+}
+
+::placeholder {
+    color: #e7ffdd;
+}
+
+input[type=url] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid lightgreen;
+    border-radius: 4px;
+    background-color: transparent;
+}
+
+label {
+    color: white;
+}
+
+select {
+    border: 2px solid lightgreen;
+    border-radius: 4px;
+    color: white;
+    font-size: 20px;
+    background-color: transparent;
+}
+
+select option {
+    color: black;
+}
+
+form > button {
+   float: right;
+}
+
+.likes > img {
+    border: none;
+    max-height: 50px;
+}
+
+.likes {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.edit-menu {
+    float: right;
+}
+
+.edit-menu > ul {
+    padding: 0;
+    margin-top: 0;
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+}
+
+.edit-btns > button {
+    padding: 20px;
+}

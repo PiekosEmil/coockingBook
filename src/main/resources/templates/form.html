@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout.html}" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <title>Coocking book</title>
+</head>
+<body>
+<div class="content" layout:fragment="content">
+    <form method="post" action="/save" th:object="${przepis}">
+        <label for="title">Tytuł przepisu</label><br>
+        <input type="text" id="title" placeholder="Najlepszy przepis na obiad!" autofocus th:field="*{title}"><br>
+        <label for="description">Opis</label><br>
+        <textarea id="description" placeholder="Podziel się z nami jak przygotowujesz swój ulubiony posiłek." th:field="*{description}"></textarea><br><br>
+        <label for="kategoria">Kategoria:</label><br><br>
+        <select id="kategoria" th:field="*{kategoria}">
+            <option class="option" th:each="kategoria : ${kategorie}" th:text="${kategoria.getName()}" th:value="${kategoria.getId()}"></option>
+        </select><br><br>
+        <label for="image">Link do obrazu:</label><br>
+        <input type="url" id="image" placeholder="https://www.example.image.here/" th:field="*{imageUrl}"><br>
+        <br>
+        <button class="button" type="submit">Zapisz!</button>
+    </form>
+</div>
+</body>
+</html>

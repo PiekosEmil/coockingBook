@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout.html}" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <title>Coocking book</title>
+</head>
+<body>
+<div class="content" layout:fragment="content">
+    <ul class="kategorie">
+        <li th:each="kategoria : ${kategorie}">
+            <div>
+                <a th:href="@{/#(id=${kategoria.getId()})}"><h1 th:text="${kategoria.getName()}"></h1></a>
+            </div>
+        </li>
+    </ul>
+</div>
+
+
+</body>
+</html>
